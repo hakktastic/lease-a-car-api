@@ -6,7 +6,7 @@ metadata:
     service: lease-calculation-service
   annotations: 
   name: lease-calculation-service
-  namespace: default
+  namespace: {{.Values.metadata.namespace}}
 spec:
   replicas: {{.Values.replicaCount}}
   selector:

@@ -5,7 +5,7 @@ metadata:
     api: lease-a-car-api   
     service: car-service
   name: car-service
-  namespace: default
+  namespace: {{.Values.metadata.namespace}}
 spec:
   replicas: {{.Values.replicaCount}}
   selector:
