@@ -10,7 +10,10 @@ replicaCount: 1
 image:
   repository: "hakktastic"
   pullPolicy: Always
-  tag: "0.6.0"
+  tag-car-service: "0.6.1"
+  tag-customer-service: "0.6.0"
+  tag-interest-rate-service: "0.6.0"
+  tag-lease-calculation-service: "0.6.0"
   
 service:
   spec:

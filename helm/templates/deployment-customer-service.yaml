@@ -19,7 +19,7 @@ spec:
     spec:
       restartPolicy: Always
       containers:
-      - image: {{.Values.image.repository}}/customer-service:{{.Values.image.tag}}
+      - image: {{.Values.image.repository}}/customer-service:{{.Values.image.tag-customer-service}}
         imagePullPolicy: {{.Values.image.pullPolicy}}
         name: customer-service
         ports:
