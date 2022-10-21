@@ -19,7 +19,7 @@ spec:
     spec:
       restartPolicy: Always
       containers:
-      - image: {{.Values.image.repository}}/interest-rate-service:{{.Values.image.tag-interest-rate-service}}
+      - image: {{.Values.image.repository}}/interest-rate-service:{{.Values.image.tagInterestRateService}}
         imagePullPolicy: {{.Values.image.pullPolicy}}
         name: interest-rate-service
         ports:
