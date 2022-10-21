@@ -20,7 +20,7 @@ spec:
     spec:
       restartPolicy: Always
       containers:
-      - image: {{.Values.image.repository}}/lease-calculation-service:{{.Values.image.tag}}
+      - image: {{.Values.image.repository}}/lease-calculation-service:{{.Values.image.tagLeaseCalculationService}}
         imagePullPolicy: {{.Values.image.pullPolicy}}
         name: lease-calculation-service
         ports:
