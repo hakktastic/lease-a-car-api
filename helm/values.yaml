@@ -12,7 +12,7 @@ image:
   pullPolicy: Always
   tagCarService: "0.7.0"
   tagCustomerService: "0.7.0"
-  tagInterestRateService: "0.6.0"
+  tagInterestRateService: "0.7.0"
   tagLeaseCalculationService: "0.6.0"
   
 service:
