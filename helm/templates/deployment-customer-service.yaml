@@ -25,6 +25,22 @@ spec:
         ports:
         - containerPort: 8081
           protocol: TCP
+        env:
+        - name: MARIADB_HOST_PORT
+          valueFrom:
+            configMapKeyRef:
+              name: mariadb-configmap
+              key: mariadb-host-port
+        - name: MARIADB_USER
+          valueFrom:
+            secretKeyRef:
+              name: mariadb-secret
+              key: mariadb-user
+        - name: MARIADB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mariadb-secret
+              key: mariadb-password
         livenessProbe:
           httpGet:  
             path: customer-service/actuator/health/liveness  
