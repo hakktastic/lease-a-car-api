@@ -26,21 +26,28 @@ spec:
         - containerPort: 8083
           protocol: TCP
         env:
-        - name: MARIADB_HOST_PORT
+       #DATABASE
+        - name: DB_HOST_PORT
           valueFrom:
             configMapKeyRef:
-              name: mariadb-configmap
-              key: mariadb-host-port
-        - name: MARIADB_USER
+              name: lease-a-car-api-configmap
+              key: db-host-port
+        - name: DB_USER
           valueFrom:
             secretKeyRef:
-              name: mariadb-secret
-              key: mariadb-user
-        - name: MARIADB_PASSWORD
+              name: lease-a-car-api-secret
+              key: db-user
+        - name: DB_PASSWORD
           valueFrom:
             secretKeyRef:
-              name: mariadb-secret
-              key: mariadb-password
+              name: lease-a-car-api-secret
+              key: db-password
+        # SPRING
+        - name: SPRING_PROFILES_ACTIVE
+          valueFrom:
+            configMapKeyRef:
+              name: lease-a-car-api-configmap
+              key: spring-profiles-active
         livenessProbe:
           httpGet:  
             path: interest-rate-service/actuator/health/liveness
